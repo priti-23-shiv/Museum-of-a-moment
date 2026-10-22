@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#080b12">
+<title>The Museum of a Moment | Archive No. 23102026</title>
+<style>
+:root{
+  --night:#080b12; --panel:#101622; --panel2:#151d2a; --gold:#c8a96b;
+  --gold-light:#f0dca9; --ivory:#f3eddf; --muted:#a9a99f; --line:rgba(200,169,107,.28);
+  --serif:Georgia,"Times New Roman",serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--night);color:var(--ivory);font-family:Arial,Helvetica,sans-serif;line-height:1.7}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:-1;background:
+ radial-gradient(ellipse at 15% 10%,rgba(50,64,89,.25),transparent 42%),
+ radial-gradient(ellipse at 90% 85%,rgba(123,87,38,.12),transparent 35%)}
+button,input{font:inherit}
+button{cursor:pointer}
+a{color:inherit}
+.topbar{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:18px clamp(18px,5vw,70px);border-bottom:1px solid rgba(255,255,255,.07);font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+.brand{color:var(--gold-light)}
+.topbar span:last-child{text-align:right}
+.hero{min-height:88vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:80px 22px;position:relative;overflow:hidden}
+.hero:before,.hero:after{content:"";position:absolute;width:min(72vw,560px);height:min(72vw,560px);border:1px solid rgba(200,169,107,.12);border-radius:50%;pointer-events:none}
+.hero:after{width:min(58vw,440px);height:min(58vw,440px);border-style:dashed;opacity:.55}
+.hero-inner{max-width:760px;position:relative;z-index:1}
+.eyebrow{color:var(--gold);font-size:.72rem;letter-spacing:.25em;text-transform:uppercase}
+h1,h2,h3{font-family:var(--serif);font-weight:400;line-height:1.15}
+h1{font-size:clamp(2.7rem,8vw,6.2rem);letter-spacing:-.035em;margin:22px 0}
+h1 em{font-weight:400;color:var(--gold-light)}
+.hero p{max-width:550px;margin:0 auto 28px;color:#c4c2b9;font-family:var(--serif);font-size:clamp(1.1rem,2.6vw,1.4rem)}
+.archive-label{display:inline-block;border:1px solid var(--line);padding:9px 14px;margin:12px 0 25px;font-size:.72rem;letter-spacing:.15em;color:var(--gold-light)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;background:transparent;color:var(--gold-light);border:1px solid var(--gold);padding:13px 22px;letter-spacing:.12em;text-transform:uppercase;font-size:.72rem;transition:background .25s,color .25s,transform .25s}
+.btn:hover,.btn:focus-visible{background:var(--gold);color:var(--night);transform:translateY(-2px)}
+.tiny-note{font-size:.76rem;color:var(--muted);margin-top:22px}
+.section{padding:80px clamp(18px,6vw,90px);max-width:1180px;margin:auto}
+.section-head{text-align:center;max-width:650px;margin:0 auto 42px}
+.section-head h2{font-size:clamp(2rem,5vw,3.6rem);margin:12px 0}
+.section-head p{color:var(--muted);margin:0}
+.rule{width:70px;height:1px;background:var(--gold);margin:20px auto}
+.exhibits{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.card{position:relative;text-align:left;min-height:265px;padding:26px 23px;background:linear-gradient(145deg,rgba(255,255,255,.045),rgba(255,255,255,.012));border:1px solid var(--line);color:var(--ivory);transition:transform .25s,border-color .25s,background .25s}
+.card:hover,.card:focus-visible{transform:translateY(-5px);border-color:var(--gold);background:linear-gradient(145deg,rgba(200,169,107,.1),rgba(255,255,255,.015))}
+.card-no{color:var(--gold);font-size:.7rem;letter-spacing:.17em}
+.card-icon{display:block;font-size:1.6rem;margin:20px 0 8px;color:var(--gold-light)}
+.card h3{font-size:1.55rem;margin:0 0 10px}
+.card p{font-size:.9rem;color:var(--muted);margin:0 0 18px}
+.card .open-label{font-size:.7rem;letter-spacing:.13em;text-transform:uppercase;color:var(--gold-light)}
+.band{border-block:1px solid rgba(255,255,255,.07);background:linear-gradient(90deg,transparent,rgba(200,169,107,.055),transparent)}
+.timeline{max-width:760px;margin:auto;border-left:1px solid var(--line);padding-left:28px}
+.timeline-item{position:relative;padding:0 0 28px}
+.timeline-item:before{content:"";position:absolute;left:-34px;top:8px;width:10px;height:10px;border-radius:50%;background:var(--gold);box-shadow:0 0 18px rgba(200,169,107,.35)}
+.timeline-item strong{color:var(--gold-light);font-size:.75rem;letter-spacing:.15em;text-transform:uppercase}
+.timeline-item h3{font-size:1.55rem;margin:5px 0}
+.timeline-item p{margin:0;color:var(--muted)}
+.capsule-wrap{max-width:760px;margin:auto;border:1px solid var(--line);padding:clamp(24px,5vw,52px);text-align:center;background:radial-gradient(ellipse at top,rgba(200,169,107,.09),transparent 70%),var(--panel)}
+.capsule-symbol{width:94px;height:94px;border:1px solid var(--gold);border-radius:50%;display:grid;place-items:center;margin:0 auto 24px;font-size:2rem;color:var(--gold-light);box-shadow:0 0 45px rgba(200,169,107,.08)}
+.capsule-wrap h2{font-size:clamp(2rem,5vw,3.2rem);margin:10px 0}
+.capsule-wrap>p{color:var(--muted);max-width:530px;margin:0 auto 28px}
+.records{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:30px}
+.record{border:1px solid var(--line);background:rgba(0,0,0,.16);padding:20px 14px;text-align:left;color:var(--ivory);min-height:150px}
+.record .seal{display:block;color:var(--gold);font-size:1.3rem;margin-bottom:12px}
+.record strong{display:block;font-family:var(--serif);font-size:1.15rem;font-weight:400}
+.record small{display:block;color:var(--muted);margin-top:8px;font-size:.75rem}
+.record:hover{border-color:var(--gold)}
+.quote{font-family:var(--serif);font-size:clamp(1.5rem,3.8vw,2.4rem);line-height:1.45;text-align:center;max-width:780px;margin:auto;color:var(--gold-light)}
+.quote small{display:block;font-family:Arial,sans-serif;font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-top:22px}
+.lock-box{max-width:620px;margin:auto;border:1px solid var(--line);padding:clamp(24px,5vw,42px);text-align:center;background:var(--panel)}
+.lock-icon{font-size:2rem;color:var(--gold-light)}
+.lock-box h2{font-size:2.4rem;margin:8px 0}
+.lock-box p{color:var(--muted)}
+.code-row{display:flex;gap:10px;max-width:390px;margin:22px auto 10px}
+.code-row input{min-width:0;flex:1;background:#090d15;border:1px solid var(--line);padding:13px;color:var(--ivory);text-align:center;letter-spacing:.12em;outline:none}
+.code-row input:focus{border-color:var(--gold)}
+.feedback{min-height:24px;color:var(--gold-light);font-size:.85rem}
+.letter{max-width:760px;margin:auto;background:#e9dfc9;color:#28251f;padding:clamp(28px,6vw,62px);box-shadow:0 18px 65px rgba(0,0,0,.25);position:relative}
+.letter:before{content:"PERSONAL RECORD  •  23 OCTOBER 2026";display:block;font-size:.65rem;letter-spacing:.15em;color:#71634c;border-bottom:1px solid #c9bda4;padding-bottom:14px;margin-bottom:28px}
+.letter h2{font-size:clamp(2rem,5vw,3.4rem);margin:0 0 24px;color:#26231e}
+.letter p{font-family:var(--serif);font-size:1.05rem;line-height:1.9}
+.letter .signoff{margin-top:30px;font-style:italic}
+.letter .signature{font-family:var(--serif);font-size:1.5rem;color:#75603b}
+.certificate{max-width:760px;margin:auto;border:1px solid var(--gold);outline:1px solid rgba(200,169,107,.15);outline-offset:8px;padding:clamp(26px,5vw,48px);text-align:center}
+.certificate h2{font-size:clamp(2rem,5vw,3.2rem);margin:12px 0}
+.certificate .archive-no{color:var(--gold-light);letter-spacing:.2em;font-size:.8rem}
+.certificate p{color:var(--muted)}
+footer{text-align:center;padding:35px 20px 45px;border-top:1px solid rgba(255,255,255,.07);color:var(--muted);font-size:.75rem;letter-spacing:.08em}
+.hidden{display:none!important}
+.fade-in{animation:fadeIn .65s ease both}
+@keyframes fadeIn{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:760px){.exhibits{grid-template-columns:1fr}.card{min-height:0}.records{grid-template-columns:1fr}.record{min-height:0}.section{padding-top:60px;padding-bottom:60px}.topbar{font-size:.62rem}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
+</style>
+</head>
+<body>
+<header class="topbar">
+  <span class="brand">The Private Collection</span>
+  <span>Archive No. 23102026</span>
+</header>
+
+<main>
+<section class="hero" id="entrance">
+  <div class="hero-inner fade-in">
+    <div class="eyebrow">A private exhibition</div>
+    <h1>The Museum<br><em>of a Moment</em></h1>
+    <p>A day. A person. A collection of things worth remembering.</p>
+    <div class="archive-label">ESTABLISHED · 23 OCTOBER 2026</div><br>
+    <button class="btn" onclick="enterMuseum()">Enter the museum <span aria-hidden="true">↗</span></button>
+    <div class="tiny-note">Take your time. Some things are meant to be discovered slowly.</div>
+  </div>
+</section>
+
+<div id="museum" class="hidden">
+<section class="section" id="exhibits">
+  <div class="section-head">
+    <div class="eyebrow">The permanent collection</div>
+    <h2>Rooms worth visiting</h2>
+    <div class="rule"></div>
+    <p>Every exhibit holds a small thought, carefully preserved. Select a display to open it.</p>
+  </div>
+  <div class="exhibits">
+    <button class="card" onclick="openModal('person')">
+      <span class="card-no">EXHIBIT 001</span><span class="card-icon">◇</span>
+      <h3>The Person</h3><p>A few words about the things that matter beyond appearances.</p><span class="open-label">Open exhibit ↗</span>
+    </button>
+    <button class="card" onclick="openModal('qualities')">
+      <span class="card-no">EXHIBIT 002</span><span class="card-icon">✧</span>
+      <h3>The Rare Qualities</h3><p>Little details that can make a person memorable.</p><span class="open-label">Open exhibit ↗</span>
+    </button>
+    <button class="card" onclick="openModal('year')">
+      <span class="card-no">EXHIBIT 003</span><span class="card-icon">⌛</span>
+      <h3>A Page from 2026</h3><p>A small marker for an unexpected and meaningful chapter.</p><span class="open-label">Open exhibit ↗</span>
+    </button>
+  </div>
+</section>
+
+<div class="band">
+<section class="section">
+  <div class="section-head">
+    <div class="eyebrow">A short timeline</div><h2>Filed under 2026</h2>
+    <p>Not every moment needs a photograph to deserve a place in the archive.</p>
+  </div>
+  <div class="timeline">
+    <div class="timeline-item"><strong>Entry 01 · The year</strong><h3>An unexpected chapter</h3><p>Sometimes, people become a meaningful part of a year in ways we could not have planned.</p></div>
+    <div class="timeline-item"><strong>Entry 02 · The occasion</strong><h3>A birthday worth celebrating</h3><p>A chance to celebrate who you are today and all the things you have yet to discover.</p></div>
+    <div class="timeline-item"><strong>Entry 03 · The future</strong><h3>The next page is yours</h3><p>There is still so much ahead to learn, experience, and become.</p></div>
+  </div>
+</section>
+</div>
+
+<section class="section" id="capsule">
+  <div class="capsule-wrap">
+    <div class="capsule-symbol" aria-hidden="true">⌑</div>
+    <div class="eyebrow">Preserved for the future</div>
+    <h2>The Time Capsule</h2>
+    <p>Some words are meant for today. Others are meant to stay. Open a record whenever you need a reminder.</p>
+    <div class="archive-label">SEALED · 23 OCTOBER 2026</div>
+    <div class="records">
+      <button class="record" onclick="openModal('difficult')"><span class="seal">◉</span><strong>For a Difficult Day</strong><small>RECORD A · OPEN WHEN NEEDED</small></button>
+      <button class="record" onclick="openModal('future')"><span class="seal">◉</span><strong>For the Person You're Becoming</strong><small>RECORD B · FUTURE SELF</small></button>
+      <button class="record" onclick="openModal('birthday')"><span class="seal">◉</span><strong>From 23 October 2026</strong><small>RECORD C · BIRTHDAY NOTE</small></button>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="quote">“Some things are worth keeping—not because they are perfect, but because they mattered.”<small>A note from the archive</small></div>
+</section>
+
+<div class="band">
+<section class="section" id="secret">
+  <div class="lock-box">
+    <div class="lock-icon">♙</div><div class="eyebrow">Restricted archive</div>
+    <h2>Archive 016</h2>
+    <p>This collection is incomplete. One final record remains sealed.<br>Enter the key to unlock it.</p>
+    <form class="code-row" onsubmit="unlockArchive(event)">
+      <input id="secretCode" type="text" autocomplete="off" placeholder="ENTER THE KEY" aria-label="Secret archive code">
+      <button class="btn" type="submit">Unlock</button>
+    </form>
+    <div class="tiny-note">Hint: his name + the age he is celebrating.</div>
+    <div class="feedback" id="codeFeedback" role="status" aria-live="polite"></div>
+    <div id="finalReveal" class="hidden fade-in">
+      <div class="rule"></div>
+      <p class="quote">Not everything worth keeping belongs in a museum.</p>
+      <p>Some things stay with us because they mattered. This final room is a small reminder that your story is still unfolding—and there are many good pages yet to come.</p>
+      <button class="btn" onclick="document.getElementById('letter').scrollIntoView({behavior:'smooth'})">View the curator's letter ↗</button>
+    </div>
+  </div>
+</section>
+</div>
+
+<section class="section" id="letter">
+  <div class="section-head">
+    <div class="eyebrow">The final room</div><h2>The Curator's Letter</h2>
+    <p>A personal record, written for this day.</p>
+  </div>
+  <article class="letter">
+    <h2>Happy 16th Birthday, Shubham.</h2>
+    <p>I wanted to make something a little different for your birthday—something you could keep and return to whenever you felt like it.</p>
+    <p>Meeting you became an unexpected and special part of my Class 10 year. I appreciate your kind heart and the respectful way you treat people. Those qualities matter more than you might sometimes realise.</p>
+    <p>As you step into another year, I hope you learn to believe in yourself a little more. Don't let one difficult day, one mistake, or one doubtful thought decide how you see yourself. You have time to learn, grow, and discover so much about who you can become.</p>
+    <p>I hope this year brings you good memories, new opportunities, and plenty of reasons to feel proud of yourself. Keep your kindness, keep learning, and don't forget to give yourself the same patience you would give someone else.</p>
+    <p class="signoff">A little effort to make your birthday special—and a small wish for the year ahead.</p>
+    <p class="signature">With good wishes,</p>
+  </article>
+</section>
+
+<section class="section">
+  <div class="certificate">
+    <div class="eyebrow">Exhibition record · Complete</div>
+    <div class="archive-no">ARCHIVE No. 23102026</div>
+    <h2>The Sixteenth Birthday</h2>
+    <div class="rule"></div>
+    <p><strong>Collection:</strong> A year worth remembering<br><strong>Subject:</strong> A new chapter<br><strong>Preserved:</strong> 23 October 2026</p>
+    <p class="quote" style="font-size:clamp(1.35rem,3vw,2rem)">This exhibition may close.<br>Its words may remain.</p>
+    <p>End of exhibition. Beginning of another chapter.</p>
+    <button class="btn" onclick="window.scrollTo({top:0,behavior:'smooth'})">Return to entrance ↑</button>
+  </div>
+</section>
+</div>
+</main>
+
+<footer>
+  THE MUSEUM OF A MOMENT · A PRIVATE COLLECTION · 23 OCTOBER 2026
+</footer>
+
+<dialog id="exhibitDialog" style="max-width:600px;width:calc(100% - 32px);border:1px solid #c8a96b;background:#101622;color:#f3eddf;padding:0">
+  <div style="padding:clamp(24px,5vw,42px)">
+    <div class="eyebrow" id="dialogEyebrow">EXHIBIT</div>
+    <h2 id="dialogTitle" style="font-size:clamp(2rem,5vw,3rem);margin:12px 0 20px">Exhibit title</h2>
+    <div class="rule" style="margin-left:0"></div>
+    <div id="dialogBody" style="color:#d0cec5;line-height:1.9"></div>
+    <button class="btn" style="margin-top:24px" onclick="document.getElementById('exhibitDialog').close()">Close record ×</button>
+  </div>
+</dialog>
+
+<script>
+const records = {
+  person: {
+    eyebrow: "EXHIBIT 001 · THE PERSON",
+    title: "More than meets the eye",
+    body: `<p>Every person carries something that cannot be measured by photographs, achievements, or words alone.</p><p>Sometimes the most remarkable things are found in the way a person treats others—in the respect they show, the care they offer, and the kindness they bring into ordinary moments.</p><p>This exhibit is a reminder to value the person behind all the labels.</p>`
+  },
+  qualities: {
+    eyebrow: "EXHIBIT 002 · THE RARE QUALITIES",
+    title: "Things worth appreciating",
+    body: `<p><strong style="color:#f0dca9">Kindness.</strong> The quiet value of a kind heart.</p><p><strong style="color:#f0dca9">Respect.</strong> A quality people remember long after a conversation ends.</p><p><strong style="color:#f0dca9">Understanding.</strong> The willingness to listen, care, and see things from another point of view.</p><p><strong style="color:#f0dca9">Character.</strong> The part of a person that matters even when nobody is watching.</p>`
+  },
+  year: {
+    eyebrow: "EXHIBIT 003 · A PAGE FROM 2026",
+    title: "An unexpected chapter",
+    body: `<p>Some chapters become special without announcing themselves at the beginning.</p><p>2026 brought new experiences, new conversations, and moments that became part of the school-year story. This little exhibit marks one of those chapters—with appreciation for what made it meaningful.</p><p>Not every memory needs to be grand to deserve a place in the archive.</p>`
+  },
+  difficult: {
+    eyebrow: "TIME CAPSULE · RECORD A",
+    title: "For a difficult day",
+    body: `<p>If today feels heavier than you expected, give yourself a little time.</p><p>One difficult day does not define your whole life. One mistake does not erase your good qualities. And one doubtful thought does not tell the complete truth about who you are.</p><p>You are allowed to learn slowly, change your mind, ask for help, and begin again. Try to speak to yourself with the same patience you would offer someone you care about.</p><p>Take the next step when you're ready. It doesn't have to be a giant one.</p>`
+  },
+  future: {
+    eyebrow: "TIME CAPSULE · RECORD B",
+    title: "Dear future self",
+    body: `<p>I hope you've kept your curiosity, learned to forgive your younger self, and found courage to keep going.</p><p>I hope you've discovered new things, met people who help you grow, and learned that becoming yourself is a journey—not a race.</p><p>Remember how much you still had to discover. Be proud of how far you've come, and stay open to what comes next.</p>`
+  },
+  birthday: {
+    eyebrow: "TIME CAPSULE · RECORD C",
+    title: "From 23 October 2026",
+    body: `<p>Happy birthday, Shubham.</p><p>Today marks the beginning of another year of your life. I hope that, when you look back on this day, you remember that someone wished you well and wanted to make the occasion feel a little more special.</p><p>May the year ahead bring you learning, laughter, good people, and reasons to believe in yourself.</p><p><em>Filed with care. Preserved with good wishes.</em></p>`
+  }
+};
+
+function enterMuseum(){
+  const museum=document.getElementById("museum");
+  museum.classList.remove("hidden");
+  museum.classList.add("fade-in");
+  setTimeout(()=>document.getElementById("exhibits").scrollIntoView({behavior:"smooth"}),50);
+}
+function openModal(key){
+  const item=records[key];
+  if(!item)return;
+  document.getElementById("dialogEyebrow").textContent=item.eyebrow;
+  document.getElementById("dialogTitle").textContent=item.title;
+  document.getElementById("dialogBody").innerHTML=item.body;
+  const dialog=document.getElementById("exhibitDialog");
+  if(typeof dialog.showModal==="function") dialog.showModal();
+  else alert(item.t 
